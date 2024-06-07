@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <p id = texto></p>
+            <button id="botao1">CLIQUE AQUI</button>
+            
+            <button onclick="lista()">CLIQUE AQUI PARA ADICIONAR A LISTA</button>
+            <div id ="lista1">
+                <li id = 'paragrafo1'>
+                </div>
+                
+            
+            
+            <script>
+                document.getElementById("botao1").addEventListener('click', function(){
+                    document.getElementById('texto').textContent = "Texto alterado via JavaScript";
+                })
+                
+            
+          
+            function lista(){
+                    const node = document.createElement("li");
+                    const textnode = document.createTextNode("");
+                    node.appendChild(textnode);
+                    document.getElementById("lista1").appendChild(node);
+          }
+          
+            </script>
+    </body>
+</html>
